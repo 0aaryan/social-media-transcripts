@@ -21,6 +21,7 @@ def main():
         if data_source == "Channel ID":
             channel_id = st.text_input("Enter YouTube Channel ID:")
             limit = st.number_input("Enter the number of videos to fetch:", min_value=0, step=10, value=0)
+            st.info("Enter 0 to fetch all videos.")
         else:
             video_link = st.text_input("Enter YouTube Video Link:")
 
@@ -72,11 +73,11 @@ def main():
 
                             st.subheader("Transcript")
                             st.code(transcript_text[0]['text'], "plaintext")
-                
+
     elif social_media_platform == "Instagram":
         st.header("Instagram Data Collection")
         st.warning("Coming soon!")
-        
+
 
 # Run the Streamlit app
 if __name__ == "__main__":
