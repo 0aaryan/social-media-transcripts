@@ -40,7 +40,7 @@ class YouTubeTranscriptExtractor:
             return []
 
     @staticmethod
-    def get_transcripts(video_links):
+    def get_transcripts_from_videos(video_links):
         try:
             # Initialize a list to store the transcripts
             transcripts = []
@@ -104,16 +104,16 @@ class YouTubeTranscriptExtractor:
 # if __name__ == "__main__":
 #     channel_id = "UCgkKA7xEOoBQNpC5TJxPLiw"
 #     extractor = YouTubeTranscriptExtractor()
-    
+
 #     short_videos = extractor.get_short_videos_from_channel(channel_id)
 #     short_videos = short_videos[:10]
 #     transcripts = extractor.get_transcripts(short_videos)
-    
+
 #     # Save transcripts to JSON
 #     extractor.save_to_json(transcripts, 'transcripts.json')
-    
+
 #     # Extract text from transcripts
 #     text_transcripts = extractor.extract_text_from_transcripts(transcripts)
-    
+
 #     # Save text transcripts to JSON
 #     extractor.save_to_json(text_transcripts, 'text_transcripts.json')
